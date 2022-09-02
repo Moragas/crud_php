@@ -1,0 +1,22 @@
+h1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    padding: 7px 0px;
+}
+
+.estilo-listagem {
+    width: 800px;
+    border-bottom: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}

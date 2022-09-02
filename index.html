@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Agenda de Contatos</title>
+        <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <h1>Agenda de Contatos</h1>
+            <form onsubmit="sendForm(event)">
+                <input type="text" id="idSelected" style="display: none">
+                <div class="col-4">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
+                </div><br/>
+                <div class="col-4">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div><br/>
+                <div class="col-4">
+                    <label for="celular">Celular</label>
+                    <input type="text" name="celular" id="celular" placeholder="Celular">
+                </div><br/>
+                <input type="submit" value="Cadastrar" name="cadUsuario">
+                <button type="button" name="cadUsuario" id="limparButton">Limpar</button>
+            </form>
+            <div id="contatos"></div>
+            <script src="index.js"></script>
+    </body>
+</html>
