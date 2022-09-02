@@ -66,7 +66,7 @@ function sendForm(e) {
 
     //onclick do exluir
     $(document).on('click', '.excluir', function () {
-        var $id = $(this).parent().attr('id');
+        var $id = $(this).parent().parent().attr('id');
         console.log($id);
         $.ajax({
             url: "cadastro.php",
@@ -87,7 +87,7 @@ function sendForm(e) {
 
     //onclick do editar
     $(document).on('click', '.editar', function () {
-        var $id = $(this).parent().attr('id');
+        var $id = $(this).parent().parent().attr('id');
         //pego os valores do contato e jogo nos inputs
         var contato = contatos.find(function (contato) {
             return contato.id == $id;
@@ -121,7 +121,7 @@ function getContatos () {
                 var $contatos = $('#contatos');
                 $contatos.html('');
                 $response.forEach(function (contato) {
-                    $contatos.append(`<div id="${contato.id}">` + contato.nome + '&nbsp&nbsp&nbsp' + contato.email +  '&nbsp&nbsp&nbsp' + contato.celular + `&nbsp&nbsp&nbsp` + `<button class="editar">Editar</button>` + `&nbsp ` + `<button class="excluir">Excluir</button>` + '</div><br/>');
+                    $contatos.append(`<div id="${contato.id}">` + `<p class="nome">${contato.nome}</p>` + `<p class="email">${contato.email}</p>` + `<p class="celular">${contato.celular}</p>` + '<div class="buttons">'+`<button class="editar">Editar</button>` + `<button class="excluir">Excluir</button>` + '</div>' +'</div>');
                 });
                 contatos = $response;
             }

@@ -19,5 +19,43 @@ button{
     border-radius: 5px;
     border: 1px solid #000;
     width: 80px;
+    cursor: pointer;
 }
 
+#contatos {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+#contatos div {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.293);
+}
+
+#contatos p {
+    font-size: 1.1rem;
+}
+
+#contatos div .nome {
+    flex: 15%;
+}
+
+#contatos div .email {
+    flex: 25%;
+}
+
+#contatos div .celular {
+    flex: 15%;
+}
+
+#contatos div .buttons {
+    display: flex;
+    justify-content: space-between;
+    flex: 15%;
+    border: none;
+}
