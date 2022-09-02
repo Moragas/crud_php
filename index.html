@@ -11,7 +11,7 @@
     </head>
     <body>
         <h1>Agenda de Contatos</h1>
-            <form onsubmit="sendForm(event)">
+            <form onSubmit="sendForm(event)">
                 <input type="text" id="idSelected" style="display: none">
                 <div class="col-4">
                     <label for="nome">Nome</label>
@@ -25,9 +25,16 @@
                     <label for="celular">Celular</label>
                     <input type="text" name="celular" id="celular" placeholder="Celular">
                 </div><br/>
-                <input type="submit" value="Cadastrar" name="cadUsuario">
-                <button type="button" name="cadUsuario" id="limparButton">Limpar</button>
-            </form>
+                <div class="col-4">
+                    <td>
+                        <input style="padding: 7px 0px; border-radius: 5px; border: 1px solid #000; width: 80px; display: inline;" type="submit" value="Cadastrar" name="cadUsuario" id="submitButton">
+                    </td>
+                    <td>
+                        <button type="button" name="cadUsuario" id="limparButton">Limpar</button>
+                    </td>
+                    
+                </div>
+            </form><br/>
             <div id="contatos"></div>
             <script src="index.js"></script>
     </body>

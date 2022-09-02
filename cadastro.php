@@ -26,9 +26,7 @@
               header("Location: index.html?msgErro=Falha ao cadastrar anúncio..");
           }
         }
-        elseif ($_POST['cadUsuario'] == 'Editar') { // ALTERAR!!!
-          /* Implementação do update aqui.. */
-          // Construir SQL para update
+        elseif ($_POST['cadUsuario'] == 'Editar') {
           try {
             $sql = "UPDATE
                       tbContatos
@@ -39,7 +37,6 @@
                     WHERE
                       id = :id_contatos ";
       
-            // Definir dados para SQL
             $dados = array(
               ':id_contatos' => $_POST['id_contatos'],
               ':nome' => $_POST['nome'],
@@ -49,7 +46,6 @@
       
             $stmt = $pdo->prepare($sql);
       
-            // Executar SQL
             if ($stmt->execute($dados)) {
                echo 'Contato alterado com sucesso!';
             }
@@ -61,10 +57,7 @@
           }
       
         }
-        elseif ($_POST['cadUsuario'] == 'Deletar') { // EXCLUIR!!!
-          /** Implementação do excluir aqui.. */
-          // id_contatos ok
-          // e-mail usuário logado ok
+        elseif ($_POST['cadUsuario'] == 'Deletar') { 
           try {
             $idToDelete = $_POST['id_contatos'];
         

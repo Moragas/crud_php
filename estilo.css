@@ -13,10 +13,14 @@ input {
     padding: 7px 0px;
 }
 
-.estilo-listagem {
-    width: 800px;
-    border-bottom: 1px solid black;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
+button{
+    padding: 7px 0px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    width: 80px;
+}
+
+td{
+    min-width: 1500px;
+    background-color: aqua;
 }

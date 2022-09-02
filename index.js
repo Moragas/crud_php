@@ -51,7 +51,7 @@ function sendForm(e) {
                 $celular.val('');
                 $id.val('');
                 //alterando botão
-                $('#submitButton').text('Cadastrar');
+                $('#submitButton').val('Cadastrar');
             },
             error: function (data) {
                 console.log('erro');
@@ -121,7 +121,7 @@ function getContatos () {
                 var $contatos = $('#contatos');
                 $contatos.html('');
                 $response.forEach(function (contato) {
-                    $contatos.append(`<div id="${contato.id}">` + contato.nome + ' - ' + contato.email +  ' - ' + contato.celular + `<button class="editar">edit</button>` + `<button class="excluir">x</button>` + '</div>');
+                    $contatos.append(`<div id="${contato.id}">` + contato.nome + '&nbsp&nbsp&nbsp' + contato.email +  '&nbsp&nbsp&nbsp' + contato.celular + `&nbsp&nbsp&nbsp` + `<button class="editar">Editar</button>` + `&nbsp ` + `<button class="excluir">Excluir</button>` + '</div><br/>');
                 });
                 contatos = $response;
             }
